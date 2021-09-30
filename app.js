@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // mongodb connection
-mongoose.connect("mongodb://localhost:27017/blogDB");
+mongoose.connect("mongodb+srv://admin-abhinav:Blog100@cluster0.zsiol.mongodb.net/blogDB");
 const postSchema = {
   title: String,
   content: String
@@ -62,7 +62,7 @@ app.post("/compose", function(req, res) {
       res.redirect("/");
     }
   });
-  res.redirect("/");
+ // res.redirect("/");
 });
 
 app.get("/posts/:postId", function(req, res) {
