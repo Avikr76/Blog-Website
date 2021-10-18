@@ -2,8 +2,7 @@
 
 <h1> Home</h1>
 <p> <%= homeStartingContent %></p>
-<p>Mention your name in Title only</p>
-<p>Use /compose to write Post</p>
+
   <%  showPosts.forEach(function(post) {    %>
     <h2> <%= post.title %></h2>
     <p> <%= post.content.slice(0, 100).concat('...') %> <a href="/posts/<%= post._id %>">Read more</a></p>  
