@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // mongodb connection
-mongoose.connect("mongodb+srv://admin-abhinav:Blog100@cluster0.zsiol.mongodb.net/blogDB");
+mongoose.connect("mongodb+srv://localhost:27017/blogDB");
 const postSchema = {
   title: String,
   content: String
